@@ -1,0 +1,434 @@
+2018-06-18 15:47:30 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'mvc': initialization started 
+2018-06-18 15:47:30 [main] [INFO] o.s.w.c.s.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'mvc-servlet': startup date [Mon Jun 18 15:47:30 PHT 2018]; root of context hierarchy 
+2018-06-18 15:47:30 [main] [INFO] o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [beans.xml] 
+2018-06-18 15:47:31 [main] [INFO] o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3feebf9c: defining beans [personnelDao,dao,contactService,roleService,personnelService,projectService,txManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,serviceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,dataSource,sessionFactory,viewResolver,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping#0,/,/listPersonnel,/deletePersonnel,/addPersonnelByFile,/listRoles,/manageRoles,/deleteRole,/addPersonnel,/updatePersonnel,/addRole,/updateRole,/listProject,/deleteProject,/addProject,/updateProject,/personnelManager,personnelValidator,roleValidator,projectValidator,messageSource,org.springframework.web.servlet.handler.MappedInterceptor#0,localeResolver,multipartResolver]; root of factory hierarchy 
+2018-06-18 15:47:31 [main] [INFO] o.s.j.d.DriverManagerDataSource - Loaded JDBC driver: org.postgresql.Driver 
+2018-06-18 15:47:31 [main] [INFO] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.2.Final} 
+2018-06-18 15:47:31 [main] [INFO] org.hibernate.Version - HHH000412: Hibernate Core {4.2.7.Final} 
+2018-06-18 15:47:31 [main] [INFO] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found 
+2018-06-18 15:47:31 [main] [INFO] org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist 
+2018-06-18 15:47:32 [main] [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect 
+2018-06-18 15:47:32 [main] [INFO] o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException 
+2018-06-18 15:47:32 [main] [INFO] o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions) 
+2018-06-18 15:47:32 [main] [INFO] o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory 
+2018-06-18 15:47:32 [main] [INFO] o.h.cache.spi.UpdateTimestampsCache - HHH000250: Starting update timestamps cache at region: org.hibernate.cache.spi.UpdateTimestampsCache 
+2018-06-18 15:47:32 [main] [INFO] o.h.c.internal.StandardQueryCache - HHH000248: Starting query cache at region: org.hibernate.cache.internal.StandardQueryCache 
+2018-06-18 15:47:33 [main] [INFO] o.s.o.h.HibernateTransactionManager - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@51172948] of Hibernate SessionFactory for HibernateTransactionManager 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Root mapping to handler '/' 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped URL path [/listPersonnel] onto handler '/listPersonnel' 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped URL path [/deletePersonnel] onto handler '/deletePersonnel' 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped URL path [/addPersonnelByFile] onto handler '/addPersonnelByFile' 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped URL path [/listRoles] onto handler '/listRoles' 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped URL path [/manageRoles] onto handler '/manageRoles' 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped URL path [/deleteRole] onto handler '/deleteRole' 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped URL path [/addPersonnel] onto handler '/addPersonnel' 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped URL path [/updatePersonnel] onto handler '/updatePersonnel' 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped URL path [/addRole] onto handler '/addRole' 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped URL path [/updateRole] onto handler '/updateRole' 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped URL path [/listProject] onto handler '/listProject' 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped URL path [/deleteProject] onto handler '/deleteProject' 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped URL path [/addProject] onto handler '/addProject' 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped URL path [/updateProject] onto handler '/updateProject' 
+2018-06-18 15:47:33 [main] [INFO] o.s.w.s.h.BeanNameUrlHandlerMapping - Mapped URL path [/personnelManager] onto handler '/personnelManager' 
+2018-06-18 15:47:34 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'mvc': initialization completed in 4094 ms 
+2018-06-18 15:47:42 [qtp2065196426-12] [INFO] PersonnelServiceImpl - PersonnelService listPersonnel method 
+2018-06-18 15:47:44 [qtp2065196426-14] [INFO] RoleServiceImpl - RoleService listProject method 
+2018-06-18 15:47:59 [qtp2065196426-16] [INFO] RoleServiceImpl - RoleService listProject method 
+2018-06-18 15:48:08 [qtp2065196426-14] [INFO] RoleServiceImpl - RoleService listProject method 
+2018-06-18 15:48:15 [qtp2065196426-16] [INFO] RoleServiceImpl - RoleService findById method 
+2018-06-18 15:48:15 [qtp2065196426-16] [INFO] RoleServiceImpl - RoleService findById method 
+2018-06-18 15:48:15 [qtp2065196426-16] [INFO] PersonnelServiceImpl - PersonnelService addPersonnel method 
+2018-06-18 15:48:15 [qtp2065196426-14] [INFO] PersonnelServiceImpl - PersonnelService listPersonnel method 
+2018-06-18 15:48:21 [qtp2065196426-16] [INFO] PersonnelServiceImpl - PersonnelService findById method 
+2018-06-18 15:48:21 [qtp2065196426-16] [INFO] RoleServiceImpl - RoleService listProject method 
+2018-06-18 15:48:21 [qtp2065196426-16] [INFO] PersonnelServiceImpl - PersonnelService findById method 
+2018-06-18 15:48:21 [qtp2065196426-16] [INFO] RoleServiceImpl - RoleService listProject method 
+2018-06-18 15:48:23 [qtp2065196426-14] [INFO] PersonnelServiceImpl - PersonnelService listPersonnel method 
+2018-06-18 15:58:39 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'mvc': initialization started 
+2018-06-18 15:58:39 [main] [INFO] o.s.w.c.s.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'mvc-servlet': startup date [Mon Jun 18 15:58:39 PHT 2018]; root of context hierarchy 
+2018-06-18 15:58:39 [main] [INFO] o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [beans.xml] 
+2018-06-18 15:58:40 [main] [INFO] o.s.j.d.DriverManagerDataSource - Loaded JDBC driver: org.postgresql.Driver 
+2018-06-18 15:58:40 [main] [INFO] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.2.Final} 
+2018-06-18 15:58:40 [main] [INFO] org.hibernate.Version - HHH000412: Hibernate Core {4.2.7.Final} 
+2018-06-18 15:58:40 [main] [INFO] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found 
+2018-06-18 15:58:40 [main] [INFO] org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist 
+2018-06-18 15:58:40 [main] [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect 
+2018-06-18 15:58:41 [main] [INFO] o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException 
+2018-06-18 15:58:41 [main] [INFO] o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions) 
+2018-06-18 15:58:41 [main] [INFO] o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory 
+2018-06-18 15:58:41 [main] [INFO] o.h.cache.spi.UpdateTimestampsCache - HHH000250: Starting update timestamps cache at region: org.hibernate.cache.spi.UpdateTimestampsCache 
+2018-06-18 15:58:41 [main] [INFO] o.h.c.internal.StandardQueryCache - HHH000248: Starting query cache at region: org.hibernate.cache.internal.StandardQueryCache 
+2018-06-18 15:58:41 [main] [INFO] o.s.o.h.HibernateTransactionManager - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@3b66ac74] of Hibernate SessionFactory for HibernateTransactionManager 
+2018-06-18 15:58:42 [main] [WARN] o.s.w.c.s.XmlWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping#0' defined in class path resource [beans.xml]: Initialization of bean failed; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [IndexController] for bean with name '/' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: IndexController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [IndexController] for bean with name '/' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: IndexController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [PersonnelController] for bean with name '/listPersonnel' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: PersonnelController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [PersonnelController] for bean with name '/deletePersonnel' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: PersonnelController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [PersonnelController] for bean with name '/addPersonnelByFile' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: PersonnelController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [RoleController] for bean with name '/listRoles' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: RoleController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [RoleController] for bean with name '/manageRoles' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: RoleController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [RoleController] for bean with name '/deleteRole' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: RoleController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [AddPersonnelController] for bean with name '/addPersonnel' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: AddPersonnelController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [UpdatePersonnelController] for bean with name '/updatePersonnel' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: UpdatePersonnelController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [AddRoleController] for bean with name '/addRole' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: AddRoleController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [UpdateRoleController] for bean with name '/updateRole' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: UpdateRoleController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [ProjectController] for bean with name '/listProject' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: ProjectController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [ProjectController] for bean with name '/deleteProject' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: ProjectController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [AddProjectController] for bean with name '/addProject' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: AddProjectController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [UpdateProjectController] for bean with name '/updateProject' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: UpdateProjectController
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [PersonnelManager] for bean with name '/personnelManager' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: PersonnelManager
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [PersonnelValidator] for bean with name 'personnelValidator' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: PersonnelValidator
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [RoleValidator] for bean with name 'roleValidator' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: RoleValidator
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [ProjectValidator] for bean with name 'projectValidator' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: ProjectValidator 
+2018-06-18 15:58:42 [main] [ERROR] o.s.web.servlet.DispatcherServlet - Context initialization failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping#0' defined in class path resource [beans.xml]: Initialization of bean failed; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [IndexController] for bean with name '/' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: IndexController
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:171)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:670)
+	at org.eclipse.jetty.servlet.ServletHolder.initialize(ServletHolder.java:427)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:760)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:374)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1497)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.startWebapp(JettyWebAppContext.java:360)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1459)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:785)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:287)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:545)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:428)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:138)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:113)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:167)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:138)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:113)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:138)
+	at org.eclipse.jetty.server.Server.start(Server.java:419)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:108)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:113)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:386)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:477)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:343)
+	at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute(JettyRunMojo.java:173)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:154)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:146)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:956)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:290)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:194)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [IndexController] for bean with name '/' defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: IndexController
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:641)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1490)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:425)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:403)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:389)
+	at org.springframework.context.support.AbstractApplicationContext.getBeanNamesForType(AbstractApplicationContext.java:1176)
+	at org.springframework.web.servlet.handler.AbstractDetectingUrlHandlerMapping.detectHandlers(AbstractDetectingUrlHandlerMapping.java:75)
+	at org.springframework.web.servlet.handler.AbstractDetectingUrlHandlerMapping.initApplicationContext(AbstractDetectingUrlHandlerMapping.java:58)
+	at org.springframework.context.support.ApplicationObjectSupport.initApplicationContext(ApplicationObjectSupport.java:120)
+	at org.springframework.web.context.support.WebApplicationObjectSupport.initApplicationContext(WebApplicationObjectSupport.java:76)
+	at org.springframework.context.support.ApplicationObjectSupport.setApplicationContext(ApplicationObjectSupport.java:74)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:121)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:97)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1626)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	... 67 common frames omitted
+Caused by: java.lang.ClassNotFoundException: IndexController
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:565)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:251)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:401)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1438)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1383)
+	... 84 common frames omitted
+2018-06-18 16:42:52 [main] [INFO] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started 
+2018-06-18 16:42:52 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 18 16:42:52 PHT 2018]; root of context hierarchy 
+2018-06-18 16:42:52 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Registering annotated classes: [class HibernateConfig] 
+2018-06-18 16:42:53 [main] [INFO] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+2018-06-18 16:42:54 [main] [INFO] o.s.j.d.DriverManagerDataSource - Loaded JDBC driver: org.postgresql.Driver 
+2018-06-18 16:42:54 [main] [INFO] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.2.Final} 
+2018-06-18 16:42:54 [main] [INFO] org.hibernate.Version - HHH000412: Hibernate Core {4.2.7.Final} 
+2018-06-18 16:42:54 [main] [INFO] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found 
+2018-06-18 16:42:54 [main] [INFO] org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist 
+2018-06-18 16:42:55 [main] [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect 
+2018-06-18 16:42:55 [main] [INFO] o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException 
+2018-06-18 16:42:56 [main] [INFO] o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions) 
+2018-06-18 16:42:56 [main] [INFO] o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory 
+2018-06-18 16:42:57 [main] [INFO] o.h.cache.spi.UpdateTimestampsCache - HHH000250: Starting update timestamps cache at region: org.hibernate.cache.spi.UpdateTimestampsCache 
+2018-06-18 16:42:57 [main] [INFO] o.h.c.internal.StandardQueryCache - HHH000248: Starting query cache at region: org.hibernate.cache.internal.StandardQueryCache 
+2018-06-18 16:42:57 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Contact]; using defaults. 
+2018-06-18 16:42:57 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Roles]; using defaults. 
+2018-06-18 16:42:57 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel]; using defaults. 
+2018-06-18 16:42:57 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Project]; using defaults. 
+2018-06-18 16:42:57 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.roles]; using defaults. 
+2018-06-18 16:42:57 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Roles.personnel]; using defaults. 
+2018-06-18 16:42:57 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.contact]; using defaults. 
+2018-06-18 16:42:57 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.project]; using defaults. 
+2018-06-18 16:42:57 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Project.personnel]; using defaults. 
+2018-06-18 16:42:57 [main] [INFO] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5554 ms 
+2018-06-18 16:42:57 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started 
+2018-06-18 16:42:58 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:42:58 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:42:58 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Registering annotated classes: [class MvcConfig] 
+2018-06-18 16:42:58 [main] [INFO] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+2018-06-18 16:42:59 [main] [INFO] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/app-resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-06-18 16:43:00 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:42:58 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:43:00 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 2852 ms 
+2018-06-18 16:43:06 [qtp825791803-18] [WARN] o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'dispatcher' 
+2018-06-18 16:43:08 [qtp825791803-19] [WARN] o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'dispatcher' 
+2018-06-18 16:44:35 [Thread-2] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:42:58 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:45:05 [main] [INFO] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started 
+2018-06-18 16:45:05 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 18 16:45:05 PHT 2018]; root of context hierarchy 
+2018-06-18 16:45:05 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Registering annotated classes: [class HibernateConfig] 
+2018-06-18 16:45:06 [main] [INFO] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+2018-06-18 16:45:07 [main] [INFO] o.s.j.d.DriverManagerDataSource - Loaded JDBC driver: org.postgresql.Driver 
+2018-06-18 16:45:07 [main] [INFO] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.2.Final} 
+2018-06-18 16:45:07 [main] [INFO] org.hibernate.Version - HHH000412: Hibernate Core {4.2.7.Final} 
+2018-06-18 16:45:07 [main] [INFO] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found 
+2018-06-18 16:45:07 [main] [INFO] org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist 
+2018-06-18 16:45:08 [main] [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect 
+2018-06-18 16:45:08 [main] [INFO] o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException 
+2018-06-18 16:45:09 [main] [INFO] o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions) 
+2018-06-18 16:45:09 [main] [INFO] o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory 
+2018-06-18 16:45:09 [main] [INFO] o.h.cache.spi.UpdateTimestampsCache - HHH000250: Starting update timestamps cache at region: org.hibernate.cache.spi.UpdateTimestampsCache 
+2018-06-18 16:45:09 [main] [INFO] o.h.c.internal.StandardQueryCache - HHH000248: Starting query cache at region: org.hibernate.cache.internal.StandardQueryCache 
+2018-06-18 16:45:09 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Contact]; using defaults. 
+2018-06-18 16:45:10 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Roles]; using defaults. 
+2018-06-18 16:45:10 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel]; using defaults. 
+2018-06-18 16:45:10 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Project]; using defaults. 
+2018-06-18 16:45:10 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.roles]; using defaults. 
+2018-06-18 16:45:10 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Roles.personnel]; using defaults. 
+2018-06-18 16:45:10 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.contact]; using defaults. 
+2018-06-18 16:45:10 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.project]; using defaults. 
+2018-06-18 16:45:10 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Project.personnel]; using defaults. 
+2018-06-18 16:45:10 [main] [INFO] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5324 ms 
+2018-06-18 16:45:10 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started 
+2018-06-18 16:45:10 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:45:10 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:45:10 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Registering annotated classes: [class MvcConfig] 
+2018-06-18 16:45:10 [main] [INFO] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+2018-06-18 16:45:12 [main] [INFO] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/app-resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-06-18 16:45:12 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:45:10 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:45:13 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 2992 ms 
+2018-06-18 16:45:17 [qtp2099348779-12] [WARN] o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'dispatcher' 
+2018-06-18 16:48:34 [Thread-2] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:45:10 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:48:34 [Thread-2] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 18 16:45:05 PHT 2018]; root of context hierarchy 
+2018-06-18 16:49:40 [main] [INFO] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started 
+2018-06-18 16:49:40 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 18 16:49:40 PHT 2018]; root of context hierarchy 
+2018-06-18 16:49:41 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Registering annotated classes: [class HibernateConfig] 
+2018-06-18 16:49:42 [main] [INFO] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+2018-06-18 16:49:44 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.exist.ecc.controllers.IndexController.home(org.springframework.web.servlet.ModelAndView) 
+2018-06-18 16:49:45 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Mon Jun 18 16:49:40 PHT 2018]; root of context hierarchy 
+2018-06-18 16:49:45 [main] [INFO] o.s.j.d.DriverManagerDataSource - Loaded JDBC driver: org.postgresql.Driver 
+2018-06-18 16:49:46 [main] [INFO] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.2.Final} 
+2018-06-18 16:49:46 [main] [INFO] org.hibernate.Version - HHH000412: Hibernate Core {4.2.7.Final} 
+2018-06-18 16:49:46 [main] [INFO] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found 
+2018-06-18 16:49:46 [main] [INFO] org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist 
+2018-06-18 16:49:47 [main] [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect 
+2018-06-18 16:49:47 [main] [INFO] o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException 
+2018-06-18 16:49:48 [main] [INFO] o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions) 
+2018-06-18 16:49:48 [main] [INFO] o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory 
+2018-06-18 16:49:49 [main] [INFO] o.h.cache.spi.UpdateTimestampsCache - HHH000250: Starting update timestamps cache at region: org.hibernate.cache.spi.UpdateTimestampsCache 
+2018-06-18 16:49:49 [main] [INFO] o.h.c.internal.StandardQueryCache - HHH000248: Starting query cache at region: org.hibernate.cache.internal.StandardQueryCache 
+2018-06-18 16:49:49 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Contact]; using defaults. 
+2018-06-18 16:49:49 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Roles]; using defaults. 
+2018-06-18 16:49:49 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel]; using defaults. 
+2018-06-18 16:49:49 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Project]; using defaults. 
+2018-06-18 16:49:49 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.roles]; using defaults. 
+2018-06-18 16:49:49 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Roles.personnel]; using defaults. 
+2018-06-18 16:49:49 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.contact]; using defaults. 
+2018-06-18 16:49:49 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.project]; using defaults. 
+2018-06-18 16:49:49 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Project.personnel]; using defaults. 
+2018-06-18 16:49:50 [main] [INFO] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 9811 ms 
+2018-06-18 16:49:50 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started 
+2018-06-18 16:49:50 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:49:50 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:49:50 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Registering annotated classes: [class MvcConfig] 
+2018-06-18 16:49:50 [main] [INFO] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+2018-06-18 16:49:51 [main] [INFO] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-06-18 16:49:51 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:49:50 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:49:52 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 1429 ms 
+2018-06-18 16:49:57 [qtp197535883-19] [WARN] o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'dispatcher' 
+2018-06-18 16:50:38 [Thread-2] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:49:50 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:50:38 [Thread-2] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 18 16:49:40 PHT 2018]; root of context hierarchy 
+2018-06-18 16:51:10 [main] [INFO] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started 
+2018-06-18 16:51:10 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 18 16:51:10 PHT 2018]; root of context hierarchy 
+2018-06-18 16:51:10 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Registering annotated classes: [class HibernateConfig] 
+2018-06-18 16:51:12 [main] [INFO] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+2018-06-18 16:51:13 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.exist.ecc.controllers.IndexController.home(org.springframework.web.servlet.ModelAndView) 
+2018-06-18 16:51:14 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Mon Jun 18 16:51:10 PHT 2018]; root of context hierarchy 
+2018-06-18 16:51:14 [main] [INFO] o.s.j.d.DriverManagerDataSource - Loaded JDBC driver: org.postgresql.Driver 
+2018-06-18 16:51:14 [main] [INFO] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.2.Final} 
+2018-06-18 16:51:14 [main] [INFO] org.hibernate.Version - HHH000412: Hibernate Core {4.2.7.Final} 
+2018-06-18 16:51:14 [main] [INFO] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found 
+2018-06-18 16:51:14 [main] [INFO] org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist 
+2018-06-18 16:51:15 [main] [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect 
+2018-06-18 16:51:15 [main] [INFO] o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException 
+2018-06-18 16:51:16 [main] [INFO] o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions) 
+2018-06-18 16:51:16 [main] [INFO] o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory 
+2018-06-18 16:51:17 [main] [INFO] o.h.cache.spi.UpdateTimestampsCache - HHH000250: Starting update timestamps cache at region: org.hibernate.cache.spi.UpdateTimestampsCache 
+2018-06-18 16:51:17 [main] [INFO] o.h.c.internal.StandardQueryCache - HHH000248: Starting query cache at region: org.hibernate.cache.internal.StandardQueryCache 
+2018-06-18 16:51:17 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Contact]; using defaults. 
+2018-06-18 16:51:17 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Roles]; using defaults. 
+2018-06-18 16:51:17 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel]; using defaults. 
+2018-06-18 16:51:17 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Project]; using defaults. 
+2018-06-18 16:51:17 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.roles]; using defaults. 
+2018-06-18 16:51:17 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Roles.personnel]; using defaults. 
+2018-06-18 16:51:17 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.contact]; using defaults. 
+2018-06-18 16:51:17 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.project]; using defaults. 
+2018-06-18 16:51:17 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Project.personnel]; using defaults. 
+2018-06-18 16:51:18 [main] [INFO] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 8032 ms 
+2018-06-18 16:51:18 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started 
+2018-06-18 16:51:18 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:51:18 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:51:18 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Registering annotated classes: [class MvcConfig] 
+2018-06-18 16:51:18 [main] [INFO] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+2018-06-18 16:51:18 [main] [INFO] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-06-18 16:51:18 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:51:18 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:51:19 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 1266 ms 
+2018-06-18 16:51:25 [qtp1637411253-18] [WARN] o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'dispatcher' 
+2018-06-18 16:52:51 [Thread-2] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:51:18 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:52:51 [Thread-2] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 18 16:51:10 PHT 2018]; root of context hierarchy 
+2018-06-18 16:53:20 [main] [INFO] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started 
+2018-06-18 16:53:21 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 18 16:53:21 PHT 2018]; root of context hierarchy 
+2018-06-18 16:53:21 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Registering annotated classes: [class HibernateConfig] 
+2018-06-18 16:53:23 [main] [INFO] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+2018-06-18 16:53:24 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.exist.ecc.controllers.IndexController.home(org.springframework.web.servlet.ModelAndView) 
+2018-06-18 16:53:24 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Mon Jun 18 16:53:21 PHT 2018]; root of context hierarchy 
+2018-06-18 16:53:25 [main] [INFO] o.s.j.d.DriverManagerDataSource - Loaded JDBC driver: org.postgresql.Driver 
+2018-06-18 16:53:25 [main] [INFO] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.2.Final} 
+2018-06-18 16:53:25 [main] [INFO] org.hibernate.Version - HHH000412: Hibernate Core {4.2.7.Final} 
+2018-06-18 16:53:25 [main] [INFO] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found 
+2018-06-18 16:53:25 [main] [INFO] org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist 
+2018-06-18 16:53:26 [main] [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect 
+2018-06-18 16:53:26 [main] [INFO] o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException 
+2018-06-18 16:53:27 [main] [INFO] o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions) 
+2018-06-18 16:53:27 [main] [INFO] o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory 
+2018-06-18 16:53:27 [main] [INFO] o.h.cache.spi.UpdateTimestampsCache - HHH000250: Starting update timestamps cache at region: org.hibernate.cache.spi.UpdateTimestampsCache 
+2018-06-18 16:53:27 [main] [INFO] o.h.c.internal.StandardQueryCache - HHH000248: Starting query cache at region: org.hibernate.cache.internal.StandardQueryCache 
+2018-06-18 16:53:28 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Contact]; using defaults. 
+2018-06-18 16:53:28 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Roles]; using defaults. 
+2018-06-18 16:53:28 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel]; using defaults. 
+2018-06-18 16:53:28 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Project]; using defaults. 
+2018-06-18 16:53:28 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.roles]; using defaults. 
+2018-06-18 16:53:28 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Roles.personnel]; using defaults. 
+2018-06-18 16:53:28 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.contact]; using defaults. 
+2018-06-18 16:53:28 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.project]; using defaults. 
+2018-06-18 16:53:28 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Project.personnel]; using defaults. 
+2018-06-18 16:53:28 [main] [INFO] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 7934 ms 
+2018-06-18 16:53:29 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started 
+2018-06-18 16:53:29 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:53:29 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:53:29 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Registering annotated classes: [class MvcConfig] 
+2018-06-18 16:53:29 [main] [INFO] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+2018-06-18 16:53:29 [main] [INFO] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-06-18 16:53:29 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:53:29 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:53:30 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 1207 ms 
+2018-06-18 16:53:33 [Thread-2] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:53:29 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:53:33 [Thread-2] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 18 16:53:21 PHT 2018]; root of context hierarchy 
+2018-06-18 16:54:46 [main] [INFO] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started 
+2018-06-18 16:54:47 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 18 16:54:47 PHT 2018]; root of context hierarchy 
+2018-06-18 16:54:47 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Registering annotated classes: [class HibernateConfig] 
+2018-06-18 16:54:47 [main] [INFO] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+2018-06-18 16:54:48 [main] [INFO] o.s.j.d.DriverManagerDataSource - Loaded JDBC driver: org.postgresql.Driver 
+2018-06-18 16:54:48 [main] [INFO] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.2.Final} 
+2018-06-18 16:54:48 [main] [INFO] org.hibernate.Version - HHH000412: Hibernate Core {4.2.7.Final} 
+2018-06-18 16:54:48 [main] [INFO] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found 
+2018-06-18 16:54:48 [main] [INFO] org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist 
+2018-06-18 16:54:49 [main] [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect 
+2018-06-18 16:54:49 [main] [INFO] o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException 
+2018-06-18 16:54:50 [main] [INFO] o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions) 
+2018-06-18 16:54:50 [main] [INFO] o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory 
+2018-06-18 16:54:50 [main] [INFO] o.h.cache.spi.UpdateTimestampsCache - HHH000250: Starting update timestamps cache at region: org.hibernate.cache.spi.UpdateTimestampsCache 
+2018-06-18 16:54:50 [main] [INFO] o.h.c.internal.StandardQueryCache - HHH000248: Starting query cache at region: org.hibernate.cache.internal.StandardQueryCache 
+2018-06-18 16:54:50 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Contact]; using defaults. 
+2018-06-18 16:54:51 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Roles]; using defaults. 
+2018-06-18 16:54:51 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel]; using defaults. 
+2018-06-18 16:54:51 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Project]; using defaults. 
+2018-06-18 16:54:51 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.roles]; using defaults. 
+2018-06-18 16:54:51 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Roles.personnel]; using defaults. 
+2018-06-18 16:54:51 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.contact]; using defaults. 
+2018-06-18 16:54:51 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.project]; using defaults. 
+2018-06-18 16:54:51 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Project.personnel]; using defaults. 
+2018-06-18 16:54:51 [main] [INFO] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4918 ms 
+2018-06-18 16:54:52 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started 
+2018-06-18 16:54:52 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:54:52 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:54:52 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Registering annotated classes: [class MvcConfig] 
+2018-06-18 16:54:52 [main] [INFO] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+2018-06-18 16:54:53 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.exist.ecc.controllers.IndexController.home(org.springframework.web.servlet.ModelAndView) 
+2018-06-18 16:54:54 [main] [INFO] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-06-18 16:54:54 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:54:52 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:54:54 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 2885 ms 
+2018-06-18 16:55:34 [Thread-2] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 16:54:52 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 16:55:34 [Thread-2] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 18 16:54:47 PHT 2018]; root of context hierarchy 
+2018-06-18 23:35:53 [main] [INFO] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started 
+2018-06-18 23:35:53 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 18 23:35:53 PHT 2018]; root of context hierarchy 
+2018-06-18 23:35:53 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Registering annotated classes: [class HibernateConfig] 
+2018-06-18 23:35:54 [main] [INFO] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+2018-06-18 23:35:54 [main] [INFO] o.s.j.d.DriverManagerDataSource - Loaded JDBC driver: org.postgresql.Driver 
+2018-06-18 23:35:54 [main] [INFO] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.2.Final} 
+2018-06-18 23:35:54 [main] [INFO] org.hibernate.Version - HHH000412: Hibernate Core {4.2.7.Final} 
+2018-06-18 23:35:54 [main] [INFO] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found 
+2018-06-18 23:35:54 [main] [INFO] org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist 
+2018-06-18 23:35:54 [main] [WARN] o.h.e.jdbc.internal.JdbcServicesImpl - HHH000342: Could not obtain connection to query metadata : FATAL: password authentication failed for user "postgres" 
+2018-06-18 23:35:54 [main] [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect 
+2018-06-18 23:35:54 [main] [INFO] o.h.e.j.internal.LobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null 
+2018-06-18 23:35:54 [main] [INFO] o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions) 
+2018-06-18 23:35:54 [main] [INFO] o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory 
+2018-06-18 23:35:54 [main] [INFO] o.h.cache.spi.UpdateTimestampsCache - HHH000250: Starting update timestamps cache at region: org.hibernate.cache.spi.UpdateTimestampsCache 
+2018-06-18 23:35:54 [main] [INFO] o.h.c.internal.StandardQueryCache - HHH000248: Starting query cache at region: org.hibernate.cache.internal.StandardQueryCache 
+2018-06-18 23:35:54 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Contact]; using defaults. 
+2018-06-18 23:35:54 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Roles]; using defaults. 
+2018-06-18 23:35:54 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel]; using defaults. 
+2018-06-18 23:35:54 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Project]; using defaults. 
+2018-06-18 23:35:54 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.roles]; using defaults. 
+2018-06-18 23:35:54 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Roles.personnel]; using defaults. 
+2018-06-18 23:35:54 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.contact]; using defaults. 
+2018-06-18 23:35:54 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Personnel.project]; using defaults. 
+2018-06-18 23:35:54 [main] [WARN] o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.exist.ecc.model.Project.personnel]; using defaults. 
+2018-06-18 23:35:54 [main] [INFO] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1061 ms 
+2018-06-18 23:35:54 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started 
+2018-06-18 23:35:54 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 23:35:54 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 23:35:54 [main] [INFO] o.s.w.c.s.AnnotationConfigWebApplicationContext - Registering annotated classes: [class MvcConfig] 
+2018-06-18 23:35:55 [main] [INFO] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+2018-06-18 23:35:55 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.exist.ecc.controllers.IndexController.home(org.springframework.web.servlet.ModelAndView) 
+2018-06-18 23:35:55 [main] [INFO] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-06-18 23:35:55 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 18 23:35:54 PHT 2018]; parent: Root WebApplicationContext 
+2018-06-18 23:35:55 [main] [INFO] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 634 ms 
+2018-06-18 23:36:06 [qtp1905252289-12] [WARN] o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcher' 
+2018-06-18 23:36:06 [qtp1905252289-14] [WARN] o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcher' 
