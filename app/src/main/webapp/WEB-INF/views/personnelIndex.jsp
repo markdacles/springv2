@@ -16,6 +16,11 @@
             <a href="/personnel/list?lang=en">[EN]</a>
             <a href="/personnel/list?lang=wry">[WRY]</a>
         </div>
+        
+
+        <form action="/logout" style="float: right;position:absolute;right:10px;top:40px;">
+            <input type="submit" value="Log Out" />
+        </form>
          <hr>
         <form style="float:right;" action="/personnel/add">
             <button type="submit" >

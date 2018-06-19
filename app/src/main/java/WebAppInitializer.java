@@ -1,3 +1,5 @@
+package com.exist.ecc.config;
+
 import com.exist.ecc.config.WebAppConfiguration;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
@@ -6,7 +8,7 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
  
    @Override
    protected Class<?>[] getRootConfigClasses() {
-      return new Class[] { WebAppConfiguration.class };
+      return new Class[] { SecurityConfig.class, WebAppConfiguration.class };
    }
  
    @Override

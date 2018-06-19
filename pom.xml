@@ -22,6 +22,7 @@
     <weaver.version>1.7.4</weaver.version>
     <mavenwar.version>3.2.0</mavenwar.version>
     <commons-dbcp.version>1.4</commons-dbcp.version>
+    <spring.security.version>4.2.7.RELEASE</spring.security.version>
 </properties>
 
   <modules>
@@ -173,6 +174,24 @@
         <artifactId>jcl-over-slf4j</artifactId>
         <version>${jcl.version}</version>
       </dependency>
+
+      <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-web</artifactId>
+      <version>${spring.security.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-config</artifactId>
+      <version>${spring.security.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-taglibs</artifactId>
+      <version>${spring.security.version}</version>
+    </dependency>
 
     </dependencies>
   </dependencyManagement>
