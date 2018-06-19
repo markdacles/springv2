@@ -13,8 +13,8 @@
     <hr>
     <h2>
       <a href = "/personnel/list">1. <spring:message code="label.manp"/></a> <br/>
-      <a href = "/addRole">2. <spring:message code="label.manr"/></a> <br/>
-      <a href = "/listProject">3. <spring:message code="label.manj"/></a> <br/>
+      <a href = "/role/list">2. <spring:message code="label.manr"/></a> <br/>
+      <a href = "/project/list">3. <spring:message code="label.manj"/></a> <br/>
   </h2>
   </body>
 </html>

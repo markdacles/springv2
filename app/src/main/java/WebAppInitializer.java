@@ -1,15 +1,17 @@
+import com.exist.ecc.config.WebAppConfiguration;
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
  
    @Override
    protected Class<?>[] getRootConfigClasses() {
-      return new Class[] { HibernateConfig.class };
+      return new Class[] { WebAppConfiguration.class };
    }
  
    @Override
    protected Class<?>[] getServletConfigClasses() {
-      return new Class[] { MvcConfig.class };
+      return null;
    }
  
    @Override

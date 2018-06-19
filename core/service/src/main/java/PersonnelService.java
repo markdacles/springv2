@@ -12,9 +12,9 @@ public interface PersonnelService {
 
     public List<Personnel> listPersonnel();
 
- 	public void deletePersonnel(Long id, String object);
+ 	public void deletePersonnel(Long id);
 
-	public Personnel findById(Long id, String object);
+	public Personnel findById(Long id);
 
 	// public List<Personnel> searchFor(String str);
 }

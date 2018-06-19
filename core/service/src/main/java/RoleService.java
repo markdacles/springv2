@@ -9,12 +9,12 @@ public interface RoleService {
     
     public List<Roles> listRoles();
 
-    public Roles findById(Long id, String object);
+    public Roles findById(Long id);
 
     public void addRole(Roles r);
 
     public void updateRole(Roles r);
 
-    public void deleteRole(Long id, String object);
+    public void deleteRole(Long id);
 
 }

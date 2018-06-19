@@ -7,11 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.exist.ecc.model.*;
+import com.exist.ecc.model.Roles;
 import com.exist.ecc.dao.*;
 
-@Service
-@Transactional
+@Service("roleService")
 public class RoleServiceImpl implements RoleService {
     
     @Autowired
@@ -20,11 +19,11 @@ public class RoleServiceImpl implements RoleService {
 
     @Transactional(readOnly = true)
     public List<Roles> listRoles() {
-        return (List<Roles>) dao.getList("com.exist.model.Roles");
+        return dao.getList("com.exist.ecc.model.Roles");
     }
 
-    @Transactional
-    public Roles findById(Long id, String object) {
+    @Transactional(readOnly = true)
+    public Roles findById(Long id) {
         return (Roles) dao.getById(id, "com.exist.ecc.model.Roles");
     }
 
@@ -39,9 +38,8 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Transactional
-    public void deleteRole(Long id, String object) {
+    public void deleteRole(Long id) {
         logger.info("RoleService deleteRole method");
-        dao.delete(id, "Roles");
+        dao.delete(id, "com.exist.ecc.model.Roles");
     }
-
 }

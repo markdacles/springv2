@@ -19,18 +19,18 @@
         </div>
         <hr/>
         <br>
-        <form:form method="POST" commandName="project">
+        <form:form action = "save" method="POST" commandName="project">
 
             <spring:message code="label.pname"/>:
-            <form:input path="projectName" value = "${personnel.name.fname}"/>
+            <form:input path="projectName" value = "${project.projectName}"/>
             <form:errors class="error" path="projectName"/><br/>
 
             <spring:message code="label.psdate"/>:
-            <form:input path="startDate" type="date" value = "${personnel.birthday}"/>
+            <form:input path="startDate" type="date" value = "${project.startDate}"/>
             <form:errors class="error" path="startDate"/><br/>
             
             <spring:message code="label.pedate"/>:
-            <form:input path="endDate" type="date" value = "${personnel.dateHired}"/>
+            <form:input path="endDate" type="date" value = "${project.endDate}"/>
             <form:errors class="error" path="endDate"/><br/>
 
             <br>
@@ -62,10 +62,10 @@
 
             <br/>
             <input type = "hidden" name="addOrUpdate" value="${pact}">
-            <input type = "hidden" name="pid" value="${personnel.id}">
+            <input type = "hidden" name="pid" value="${project.projectId}">
             <input type = "submit" id="submitbutton" value = '<spring:message code="label.submit"/>'>
         </form:form>
-         <form action="/listProject">
+         <form action="/project/list">
             <button type="submit"><spring:message code="label.back"/></button>
         </form>
 

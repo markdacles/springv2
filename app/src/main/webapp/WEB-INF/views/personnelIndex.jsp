@@ -24,7 +24,7 @@
         </form>
         
 
-        <form method="POST"  commandName="uploadFile" enctype="multipart/form-data">
+        <form action="/personnel/upload" method="POST"  modelAttribute="uploadFile" enctype="multipart/form-data">
             Upload Personnel From File: <input type="file" name="file"/>
             <button type="submit" name="submit">Upload</button>${fileerror}
         </form>
@@ -73,10 +73,10 @@
                             </c:forEach>
                         </td>
                         <td>
-                            <a href = "/updatePersonnel?pid=<c:out value='${p.id}'/>" ><spring:message code="label.updatep"/></a>
+                            <a href = "/personnel/update?pid=<c:out value='${p.id}'/>" ><spring:message code="label.updatep"/></a>
                         </td>
                         <td>
-                            <a href = "/deletePersonnel?pid=<c:out value='${p.id}'/>" ><spring:message code="label.deletep"/></a>
+                            <a href = "/personnel/delete?pid=<c:out value='${p.id}'/>" ><spring:message code="label.deletep"/></a>
                         </td>
                     </tr>
                 </c:forEach>

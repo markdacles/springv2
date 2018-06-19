@@ -13,12 +13,12 @@
     <body>
         <h2 style="display: inline-block;"><spring:message code="label.uprole"/></h2> 
         <div style="float: right;display: inline-block;"> 
-            <a href="/updateRole?roleid=${roleid}&lang=en">[EN]</a>
-            <a href="/updateRole?roleid=${roleid}&lang=wry">[WRY]</a>
+            <a href="/role/update?roleid=${roleid}&lang=en">[EN]</a>
+            <a href="/role/update?roleid=${roleid}&lang=wry">[WRY]</a>
         </div>
          <hr/>
         <div>
-            <form:form method="POST" commandName="roles">
+            <form:form action = "/role/save" method="POST" modelAttribute="roles">
             <table border = "1" width = "50%" id="roleTable" align="center">
                 <col width="65%">
                 <col width="15%">
@@ -34,7 +34,7 @@
                     <input type="hidden" value="${r.roleId}" name="roleid"/>
                     <td align="center">
                             <input style="width:100%;" type="submit" value="<spring:message code='label.save'/>"/>
-                            <a href = "/deleteRole?roleid=<c:out value='${roleid}'/>"> <button type="button" style="width:100%;"><spring:message code="label.delete"/></button></a>
+                            <a href = "/role/delete?roleid=<c:out value='${roleid}'/>"> <button type="button" style="width:100%;"><spring:message code="label.delete"/></button></a>
                         </td>
                 </tr>
             </table>
@@ -42,7 +42,7 @@
         </div>
         <br>
 
-        <form action="/addRole">
+        <form action="/role/list">
             <button type="submit"><spring:message code="label.back"/></button>
         </form>
 

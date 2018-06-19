@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.exist.ecc.model.*;
 import com.exist.ecc.dao.*;
  
-@Service
+@Service("personnelService")
 public class PersonnelServiceImpl implements PersonnelService {
 
     @Autowired
@@ -22,13 +22,13 @@ public class PersonnelServiceImpl implements PersonnelService {
     private static Logger logger = LoggerFactory.getLogger(PersonnelServiceImpl.class);
 
     @Transactional(readOnly = true)
-    public Personnel findById(Long id, String object) {
+    public Personnel findById(Long id) {
         return (Personnel) dao.getById(id, "com.exist.ecc.model.Personnel");
     }
 
     @Transactional
-    public void deletePersonnel(Long id, String object) {
-        dao.delete(id, "com.exist.model.Person");
+    public void deletePersonnel(Long id) {
+        dao.delete(id, "com.exist.ecc.model.Personnel");
     }
 
     @Transactional

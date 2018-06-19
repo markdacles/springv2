@@ -13,11 +13,11 @@
     <body>
         <h2 style="display: inline-block;"><spring:message code="label.${pact}"/></h2> 
         <div style="float: right;display: inline-block;"> 
-            <a href="/listProject?lang=en">[EN]</a>
-            <a href="/listProject?lang=wry">[WRY]</a>
+            <a href="/project/list?lang=en">[EN]</a>
+            <a href="/project/list?lang=wry">[WRY]</a>
         </div>
          <hr>
-        <form action="/addProject">
+        <form action="/project/add">
             <button type="submit"><spring:message code="label.addj"/></button>
         </form>
     </div>
@@ -46,10 +46,10 @@
                             </c:forEach>
                         </td>
                         <td>
-                             <a href = "/updateProject?pid=<c:out value='${p.projectId}'/>" ><spring:message code="label.updatej"/></a>
+                             <a href = "/project/update?pid=<c:out value='${p.projectId}'/>" ><spring:message code="label.updatej"/></a>
                         </td>
                         <td>
-                             <a href = "/deleteProject?pid=<c:out value='${p.projectId}'/>" ><spring:message code="label.deletej"/></a>
+                             <a href = "/project/delete?pid=<c:out value='${p.projectId}'/>" ><spring:message code="label.deletej"/></a>
                         </td>
                     </tr>
                 </c:forEach>

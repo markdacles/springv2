@@ -13,12 +13,12 @@
     <body>
         <h2 style="display: inline-block;"><spring:message code="label.manr"/></h2> 
         <div style="float: right;display: inline-block;"> 
-            <a href="/addRole?lang=en">[EN]</a>
-            <a href="/addRole?lang=wry">[WRY]</a>
+            <a href="/role/list?lang=en">[EN]</a>
+            <a href="/role/list?lang=wry">[WRY]</a>
         </div>
          <hr/>
         <div>
-            <form:form method="POST" commandName="roles">
+            <form:form action="/role/save" method="POST" commandName="roles">
             <table border = "1" width = "80%" id="roleTable" align="center">
                 <col width="66%">
                 <col width="12%">
@@ -29,15 +29,15 @@
                     <th><spring:message code="label.delete"/></th>
                 </tr>
 
-                <c:forEach items = "${rolelist}" var = "r">
+                <c:forEach items = "${roleList}" var = "r">
                         <tr>
                                 <td> ${r.role}
                                 </td>
                                 <td>
-                                    <a href = "/updateRole?roleid=<c:out value='${r.roleId}'/>" ><spring:message code="label.uprole"/></a>
+                                    <a href = "/role/update?roleid=<c:out value='${r.roleId}'/>" ><spring:message code="label.uprole"/></a>
                                 </td>
                                 <td>
-                                    <a href = "/deleteRole?roleid=<c:out value='${r.roleId}'/>" ><spring:message code="label.delrole"/></a>
+                                    <a href = "/role/delete?roleid=<c:out value='${r.roleId}'/>" ><spring:message code="label.delrole"/></a>
                                 </td>
                         </tr>
                 </c:forEach>

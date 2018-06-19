@@ -1,7 +1,10 @@
-package com.exist.controllers;
+package com.exist.ecc.controllers;
 
 import com.exist.ecc.model.Roles;
 import com.exist.ecc.model.Personnel;
+import com.exist.ecc.model.FileUpload;
+import com.exist.ecc.model.Name;
+import com.exist.ecc.model.Address;
 import com.exist.ecc.model.Contact;
 import com.exist.ecc.service.PersonnelService;
 import com.exist.ecc.service.RoleService;
@@ -19,6 +22,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.validation.BindingResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.multipart.MultipartFile;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 
 @Controller
 @RequestMapping(value="/personnel")
@@ -29,6 +38,13 @@ public class PersonnelController {
 	
 	@Autowired
 	private RoleService roleService;
+
+	@InitBinder
+    protected void dataBinding(WebDataBinder binder) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        binder.registerCustomEditor(Date.class, new CustomDateEditor(
+            dateFormat, true));
+	}
 
 	@RequestMapping(value="/list", method=RequestMethod.GET)
 	public ModelAndView listPersonnel (
@@ -57,6 +73,7 @@ public class PersonnelController {
         }
 
 		mav.addObject("personnelList", personnelList);
+		mav.addObject("uploadFile", new FileUpload());
 		mav.addObject("pact", "manp");
 		return mav;
 
@@ -78,10 +95,13 @@ public class PersonnelController {
 	public ModelAndView savePersonnel (@ModelAttribute("personnel") Personnel p, BindingResult result,
 		@RequestParam(value="contactType", required=false) String[] cType,
 		@RequestParam(value="contactDetails", required=false) String[] cDetails,
-		@RequestParam(value="checkedRoles", required=false) String[] cRoles) {
+		@RequestParam(value="checkedRoles", required=false) String[] cRoles,
+		@RequestParam(value="pid", required=false) Long id) {
 
 		ModelAndView mav = new ModelAndView("redirect:/personnel/list");
 		
+		System.out.println(cDetails.length);
+
 		if(cDetails != null){
 			for(int i = 0; i < cDetails.length; i++){
 				Contact c = new Contact();
@@ -92,42 +112,142 @@ public class PersonnelController {
 		}
 
 		if (cRoles != null) {
-            for (String id : cRoles) {
-               Roles role = roleService.findById(Long.parseLong(id), "Roles");
+            for (String rid : cRoles) {
+               Roles role = roleService.findById(Long.parseLong(rid));
                p.getRoles().add(role);
             }
         }
         
 
-		if (p.getId() == 0) {
-			personnelService.addPersonnel(p);
+		if (id == null) {
+			personnelService.addPersonnel(p);	
 		}
 		else {
+			p.setId(id);
 			personnelService.updatePersonnel(p);
 		}
 		return mav;
 	}
 
-	// @RequestMapping(value="/delete", method=RequestMethod.GET)
-	// public ModelAndView deletePerson(@RequestParam(value="personId", required=true) long id) {
-	// 	personService.deletePerson(id);
-	// 	ModelAndView modelAndView = new ModelAndView("redirect:/person/list");
-	// 	modelAndView.addObject("prompt", "Successfully deleted a Person!");
-	// 	return modelAndView;
-	// }
+	@RequestMapping(value="/upload", method=RequestMethod.POST)
+	public ModelAndView uploadFile (@ModelAttribute("uploadFile") FileUpload f, BindingResult result) {
 
-	// @RequestMapping(value="/update", method=RequestMethod.GET)
-	// public ModelAndView updatePerson(@RequestParam(value="personId", required=true) long id) {
-	// 	Person person = personService.getPersonById(id);
-	// 	if (person.getContactInformation() == null) {
-	// 		person.setContactInformation(new ContactInformation());
-	// 	}
-	// 	ModelAndView modelAndView = new ModelAndView("personForm");
-	// 	List<Role> roles = roleService.listRoles();
-	// 	person.setPassword("");
-	// 	modelAndView.addObject("person", person);
-	// 	modelAndView.addObject("roles", roles);
-	// 	modelAndView.addObject("title", "Update Person");
-	// 	return modelAndView;
-	// }
+		try{
+	        MultipartFile file = f.getFile();
+			Personnel p = new Personnel();
+			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+			String content = new String(file.getBytes());
+
+			String lines[] = content.split("\\r?\\n");
+
+			String line0[] = lines[0].split(",");
+
+			int i = 0;
+
+			Name name = new Name();
+			Address address = new Address();
+
+			if(line0[i] != "") {
+				name.setLname(line0[i++]);
+			}
+			if(line0[i] != "") {
+				name.setFname(line0[i++]);
+			}
+			if(line0[i] != "") {
+				name.setMname(line0[i++]);
+			}
+			if(line0[i] != "") {
+				p.setName(name);
+			}
+			if(line0[i] != "") {
+				address.setBrgy(line0[i++]);
+			}
+			if(line0[i] != "") {
+				address.setCity(line0[i++]);
+			}
+			if(line0[i] != "") {
+				p.setAddress(address);
+			}
+			if(line0[i] != "") {
+				p.setBirthday(formatter.parse(line0[i++]));
+			}
+			if(line0[i] != "") {
+				p.setGwa(Double.parseDouble(line0[i++]));
+			}
+			if(line0[i] != "") {
+				p.setDateHired(formatter.parse(line0[i]));
+			}
+
+			String line1[] = lines[1].split(",");
+
+			for(String str : line1) {
+				Contact c = new Contact();
+				c.setContactType("Landline");
+				c.setContactDetails(str);
+				p.getContact().add(c);
+			}
+
+			String line2[] = lines[2].split(",");
+
+
+			for(String str : line2) {
+				Contact c = new Contact();
+				c.setContactType("Mobile");
+				c.setContactDetails(str);
+				p.getContact().add(c);
+			}
+
+			String line3[] = lines[3].split(",");
+
+
+			for(String str : line3) {
+				Contact c = new Contact();
+				c.setContactType("Email");
+				c.setContactDetails(str);
+				p.getContact().add(c);
+			}
+
+			String line4[] = lines[4].split(",");
+
+			List<Roles> roleList = roleService.listRoles();
+			for(String str : line4) {
+				for(Roles r : roleList) {
+					if(str.equals(r.getRole())) {
+						p.getRoles().add(r);
+					}
+				}
+			}
+
+			personnelService.addPersonnel(p);
+	        
+			return new ModelAndView("redirect:/personnel/list");
+			} catch (Exception e) {
+				ModelAndView mav = new ModelAndView("personnelIndex");
+				List<Personnel> personnelList = personnelService.listPersonnel();
+				mav.addObject("personnelList", personnelList);
+				mav.addObject("pact", "manp");
+				mav.addObject("fileerror", "Invalid file. Try again!");
+				return mav;
+			}
+	}
+
+	@RequestMapping(value="/delete", method=RequestMethod.GET)
+	public ModelAndView deletePersonnel(@RequestParam(value="pid", required=true) long id) {
+		personnelService.deletePersonnel(id);
+		ModelAndView modelAndView = new ModelAndView("redirect:/personnel/list");
+		return modelAndView;
+	}
+
+	@RequestMapping(value="/update", method=RequestMethod.GET)
+	public ModelAndView updatePerson(@RequestParam(value="pid", required=true) long id) {
+
+		ModelAndView mav = new ModelAndView("personnelForm");
+		mav.addObject("roleList", roleService.listRoles());
+		Personnel p = personnelService.findById(id);		
+		mav.addObject("personnel",p);
+		mav.addObject("pact", "updateform");
+		String url = "updatePersonnel?pid=" + id + "&";
+		mav.addObject("url", url);
+		return mav;
+	}
 }
