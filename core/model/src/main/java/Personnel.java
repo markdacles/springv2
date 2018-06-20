@@ -21,6 +21,7 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
@@ -63,6 +64,7 @@ public class Personnel {
         inverseJoinColumns = {@JoinColumn(name = "role_id")})
     private Set<Roles> roles  = new HashSet<Roles>();
 
+    @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @ManyToMany(targetEntity = Project.class, fetch = FetchType.LAZY, mappedBy = "personnel")
     @Cascade(CascadeType.SAVE_UPDATE)

@@ -12,22 +12,32 @@
       <!-- keep 30 days' worth of history -->
       <maxHistory>7</maxHistory>
     </rollingPolicy>
-</appender>
+  </appender>
+
+   <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <Pattern>%d{yyyy-MM-dd_HH:mm:ss} [%thread] [%level] %logger{36} - %msg %n</Pattern>
+    </encoder>
+  </appender>
 
   <logger name="com.exist.ecc" level="DEBUG" additivity="false">
+    <appender-ref ref="CONSOLE" />
     <appender-ref ref="FILE" />
 </logger>
 
   <logger name="org.hibernate" level="INFO" additivity="false">
+    <appender-ref ref="CONSOLE" />
     <appender-ref ref="FILE" />
   </logger>
   
   <logger name="org.springframework" level="INFO" additivity="false">
+   <appender-ref ref="CONSOLE" />
    <appender-ref ref="FILE" />
 </logger>
 
 <!-- By default, the level of the root level is set to ERROR -->
-<root level="INFO">
+<root level="ERROR">
+    <appender-ref ref="CONSOLE" />
     <appender-ref ref="FILE" />
 </root>
 

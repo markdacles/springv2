@@ -23,6 +23,7 @@
     <mavenwar.version>3.2.0</mavenwar.version>
     <commons-dbcp.version>1.4</commons-dbcp.version>
     <spring.security.version>4.2.7.RELEASE</spring.security.version>
+    <jackson.version>2.5.3</jackson.version>
 </properties>
 
   <modules>
@@ -191,6 +192,12 @@
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-taglibs</artifactId>
       <version>${spring.security.version}</version>
+    </dependency>
+
+    <dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>${jackson.version}</version>
     </dependency>
 
     </dependencies>

@@ -7,63 +7,63 @@
     timeToLiveSeconds = "120"
     />
 
-        <cache name = "Roles"
+        <cache name = "com.exist.ecc.model.Roles"
     maxElementsInMemory = "100"
     eternal = "false"
     timeToIdleSeconds = "30"
     timeToLiveSeconds = "120"
     />
 
-    <cache name = "Personnel"
+    <cache name = "com.exist.ecc.model.Personnel"
     maxElementsInMemory = "100"
     eternal = "false"
     timeToIdleSeconds = "30"
     timeToLiveSeconds = "120"
     />
 
-    <cache name = "Personnel.roles"
+    <cache name = "com.exist.ecc.model.Personnel.roles"
     maxElementsInMemory = "100"
     eternal = "false"
     timeToIdleSeconds = "30"
     timeToLiveSeconds = "120"
     />
 
-    <cache name = "Roles.personnel"
+    <cache name = "com.exist.ecc.model.Roles.personnel"
     maxElementsInMemory = "100"
     eternal = "false"
     timeToIdleSeconds = "30"
     timeToLiveSeconds = "120"
     />
 
-    <cache name = "Personnel.contact"
+    <cache name = "com.exist.ecc.model.Personnel.contact"
     maxElementsInMemory = "100"
     eternal = "false"
     timeToIdleSeconds = "30"
     timeToLiveSeconds = "120"
     />
 
-    <cache name = "Contact"
+    <cache name = "com.exist.ecc.model.Contact"
     maxElementsInMemory = "100"
     eternal = "false"
     timeToIdleSeconds = "30"
     timeToLiveSeconds = "120"
     />
 
-    <cache name = "Project"
+    <cache name = "com.exist.ecc.model.Project"
     maxElementsInMemory = "100"
     eternal = "false"
     timeToIdleSeconds = "30"
     timeToLiveSeconds = "120"
     />
 
-     <cache name = "Project.personnel"
+     <cache name = "com.exist.ecc.model.Project.personnel"
     maxElementsInMemory = "100"
     eternal = "false"
     timeToIdleSeconds = "30"
     timeToLiveSeconds = "120"
     />
 
-     <cache name = "Personnel.project"
+     <cache name = "com.exist.ecc.model.Personnel.project"
     maxElementsInMemory = "100"
     eternal = "false"
     timeToIdleSeconds = "30"

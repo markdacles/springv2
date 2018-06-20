@@ -16,6 +16,7 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.util.Set;
 import java.util.Objects;
@@ -35,8 +36,9 @@ public class Roles {
 	@Column(name = "role")
 	private String role;
 	
+	@JsonIgnore
 	@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-	@ManyToMany(targetEntity = Personnel.class, fetch = FetchType.LAZY, mappedBy = "roles")
+	@ManyToMany(targetEntity = Personnel.class, fetch = FetchType.EAGER, mappedBy = "roles")
     @Cascade(CascadeType.SAVE_UPDATE)
 	private Set<Personnel> personnel;
 	

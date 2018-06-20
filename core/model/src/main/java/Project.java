@@ -20,6 +20,7 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import java.time.*;
 import java.util.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Entity

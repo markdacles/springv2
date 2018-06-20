@@ -20,6 +20,10 @@
         <form action="/project/add">
             <button type="submit"><spring:message code="label.addj"/></button>
         </form>
+
+        <form action="/logout" style="float: right;position:absolute;right:10px;top:40px;">
+            <input type="submit" value="Log Out" />
+        </form>
     </div>
 
         <div style="overflow-x:auto;">

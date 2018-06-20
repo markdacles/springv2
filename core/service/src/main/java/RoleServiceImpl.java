@@ -19,21 +19,25 @@ public class RoleServiceImpl implements RoleService {
 
     @Transactional(readOnly = true)
     public List<Roles> listRoles() {
+        logger.info("RoleService listRoles method");
         return dao.getList("com.exist.ecc.model.Roles");
     }
 
     @Transactional(readOnly = true)
     public Roles findById(Long id) {
+        logger.info("RoleService findById method");
         return (Roles) dao.getById(id, "com.exist.ecc.model.Roles");
     }
 
     @Transactional
     public void addRole(Roles r) {
+        logger.info("RoleService addRole method");
         dao.create(r);
     }
 
     @Transactional
     public void updateRole(Roles r) {
+        logger.info("RoleService updateRole method");
         dao.update(r);
     }
 

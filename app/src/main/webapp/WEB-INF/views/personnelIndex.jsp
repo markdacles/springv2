@@ -48,12 +48,12 @@
         <div style="overflow-x:auto;">
             <table border = "1" style="width:100%;white-space: nowrap;">
                 <tr bgcolor = "#D3D3D3">
-                    <th><a href =  "/personnelManager?sortby=<c:out value='id'/>">ID</a></th>
-                    <th><a href =  "/personnelManager?sortby=<c:out value='name'/>"><spring:message code="label.name"/></a></th>
-                    <th><a href =  "/personnelManager?sortby=<c:out value='address'/>"><spring:message code="label.address"/></a></th>
-                    <th><a href =  "/personnelManager?sortby=<c:out value='bday'/>"><spring:message code="label.birthday"/></a></th>
-                    <th><a href =  "/personnelManager?sortby=<c:out value='gwa'/>">GWA</a></th>
-                    <th><a href =  "/personnelManager?sortby=<c:out value='datehired'/>"><spring:message code="label.dateHired"/></a></th>
+                    <th>ID</th>
+                    <th><spring:message code="label.name"/></th>
+                    <th><spring:message code="label.address"/></th>
+                    <th><spring:message code="label.birthday"/></th>
+                    <th>GWA</th>
+                    <th><spring:message code="label.dateHired"/></th>
                     <th><spring:message code="label.contact"/></th>
                     <th><spring:message code="label.roles"/></th>
                     <th><spring:message code="label.update"/></th>

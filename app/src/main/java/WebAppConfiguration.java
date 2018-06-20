@@ -28,13 +28,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 
 
 @Configuration
 @EnableWebMvc
 @EnableTransactionManagement
 @EnableAspectJAutoProxy
-@ComponentScan(basePackages = {"com.exist.ecc.service","com.exist.ecc.dao","com.exist.ecc.controllers"})
+@ComponentScan(basePackages = {"com.exist.ecc.service","com.exist.ecc.dao","com.exist.ecc.controllers", "com.exist.ecc.restcontrollers"})
 public class WebAppConfiguration extends WebMvcConfigurerAdapter {
    
    @Bean
@@ -110,6 +112,17 @@ public class WebAppConfiguration extends WebMvcConfigurerAdapter {
             setProperty("hibernate.cache.use_query_cache", "true");
          }
       };
+   }
+
+   @Bean
+   public BCryptPasswordEncoder passwordEncoder() {
+      BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+      return bCryptPasswordEncoder;
+   }
+
+   @Override
+   public void addResourceHandlers(ResourceHandlerRegistry registry) {
+      registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
    }
 
 }

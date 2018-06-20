@@ -23,26 +23,31 @@ public class PersonnelServiceImpl implements PersonnelService {
 
     @Transactional(readOnly = true)
     public Personnel findById(Long id) {
+        logger.info("PersonnelService findById method");
         return (Personnel) dao.getById(id, "com.exist.ecc.model.Personnel");
     }
 
     @Transactional
     public void deletePersonnel(Long id) {
+        logger.info("PersonnelService deletePersonnel method");
         dao.delete(id, "com.exist.ecc.model.Personnel");
     }
 
     @Transactional
     public void addPersonnel(Personnel p) {
+        logger.info("PersonnelService addPersonnel method");
         dao.create(p);
     }
 
     @Transactional
     public void updatePersonnel(Personnel p) {
+        logger.info("PersonnelService updatePersonnel method");
         dao.update(p);
     }
 
     @Transactional(readOnly = true)
     public List<Personnel> listPersonnel() {
+        logger.info("PersonnelService listPersonnel method");
         return dao.getList("com.exist.ecc.model.Personnel");
 }
 }

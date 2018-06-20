@@ -6,6 +6,7 @@
 
 
 <html>
+    <div>
     <head>
         <title><spring:message code="label.manr"/></title>
     </head>
@@ -16,6 +17,11 @@
             <a href="/role/list?lang=en">[EN]</a>
             <a href="/role/list?lang=wry">[WRY]</a>
         </div>
+
+        <form action="/logout" style="float: right;position:absolute;right:10px;top:40px;">
+            <input type="submit" value="Log Out" />
+        </form>
+    </div>
          <hr/>
         <div>
             <form:form action="/role/save" method="POST" commandName="roles">
